@@ -7,13 +7,23 @@ import { OrbitControls, Html } from "@react-three/drei";
 
 const Projects = () => {
     return (
-        <section id='projects' className='h-screen pt-[70px] '>
+        <section
+            id='projects'
+            className='h-screen  flex flex-col justify-center items-center pt-[70px]'>
             Projects
             <Canvas
                 camera={{ fov: 70, near: 0.1, far: 1000, position: [-5, 5, 18] }}
-                className='w-[50%] h-[50vh] bg-[#1E293B] flex justify-center items-center'>
+                className='w-[50%] h-[40vh]  flex justify-center items-center'
+                style={{
+                    height: "40vh",
+                    maxWidth: "400px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    margin: "auto",
+                }}>
                 <directionalLight position={[5, 5, 0]} intensity={3} />
-                <ambientLight intensity={2} />
+                <ambientLight intensity={3} />
 
                 <OrbitControls enableZoom={false} autoRotate={true} />
                 <Suspense
@@ -24,7 +34,7 @@ const Projects = () => {
                             </span>
                         </Html>
                     }>
-                    <Globe position={[0, 0, 0]} scale={3} />
+                    <Globe position={[0, 3, 0]} scale={6} />
                 </Suspense>
             </Canvas>
         </section>
