@@ -20,7 +20,7 @@ const Projects = () => {
                     fallback={
                         <Html>
                             <span className='w-full text-white text-2xl font-semibold'>
-                                Loading Model please wait
+                                Loading Model please wait.
                             </span>
                         </Html>
                     }>
