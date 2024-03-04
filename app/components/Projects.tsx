@@ -1,6 +1,8 @@
 "use client";
 import React, { Suspense } from "react";
 import Man from "./models/Man";
+import Galaxy from "./models/Galaxy";
+
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 
@@ -10,11 +12,11 @@ const Projects = () => {
             Projects
             <Canvas
                 camera={{ fov: 70, near: 0.1, far: 1000, position: [-5, 5, 18] }}
-                className='w-[50%] h-[50vh] bg-[#1E293B] flex justify-center items-center border-4 border-white'>
+                className='w-[50%] h-[50vh] bg-[#1E293B] flex justify-center items-center'>
                 <directionalLight position={[5, 5, 0]} intensity={3} />
                 <ambientLight intensity={2} />
 
-                <OrbitControls enableZoom={false} autoRotate={true} />
+                <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={0.1} />
                 <Suspense
                     fallback={
                         <Html>
@@ -23,7 +25,7 @@ const Projects = () => {
                             </span>
                         </Html>
                     }>
-                    <Man position={[0, -10, 0]} />
+                    <Galaxy position={[0, -10, 0]} />
                 </Suspense>
             </Canvas>
         </section>
