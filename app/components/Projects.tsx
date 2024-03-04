@@ -24,7 +24,7 @@ const Projects = () => {
                             </span>
                         </Html>
                     }>
-                    <Globe position={[0, 0, 0]} scale={6} />
+                    <Globe position={[0, 0, 0]} scale={3} />
                 </Suspense>
             </Canvas>
         </section>
