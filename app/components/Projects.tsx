@@ -1,7 +1,6 @@
 "use client";
 import React, { Suspense } from "react";
-import Man from "./models/Man";
-import Galaxy from "./models/Galaxy";
+import Globe from "./models/Globe";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
@@ -16,7 +15,7 @@ const Projects = () => {
                 <directionalLight position={[5, 5, 0]} intensity={3} />
                 <ambientLight intensity={2} />
 
-                <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={0.1} />
+                <OrbitControls enableZoom={false} autoRotate={true} />
                 <Suspense
                     fallback={
                         <Html>
@@ -25,7 +24,7 @@ const Projects = () => {
                             </span>
                         </Html>
                     }>
-                    <Galaxy position={[0, -10, 0]} />
+                    <Globe position={[0, 0, 0]} scale={6} />
                 </Suspense>
             </Canvas>
         </section>
