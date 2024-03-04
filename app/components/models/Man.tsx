@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-const Man = (props) => {
+const Man = (props: any) => {
     const { nodes, materials } = useGLTF("/models/generic_human_male_free_3d_model.glb");
     return (
         <group {...props} dispose={null}>
@@ -57,5 +57,4 @@ const Man = (props) => {
         </group>
     );
 };
-
 export default Man;
