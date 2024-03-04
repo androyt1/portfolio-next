@@ -39,7 +39,7 @@ const Man = (props: JSX.IntrinsicElements["group"]) => {
         "/models/generic_human_male_free_3d_model.glb"
     ) as GLTFResult;
     return (
-        <group {...props} dispose={null}>
+        <group {...props}>
             <primitive object={nodes._rootJoint} />
             <mesh geometry={nodes.Object_7.geometry} material={materials.male_muscle_13290} />
             <mesh geometry={nodes.Object_9.geometry} material={materials["high-poly"]} />
